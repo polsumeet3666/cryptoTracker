@@ -81,24 +81,31 @@ function trackKoinex() {
 
 
             if (diffLTC !== 0 && lastLTC !== 0) {
-                if (diffLTC > config.priceDiffLTC) {
-                    msg += "LTC : \u20B9 " + ltc + " \u2191";
-                } else if (diffLTC < config.priceDiffLTC) {
-                    msg += "LTC : \u20B9 " + ltc + " \u2193";
+                if(Math.abs(diffLTC) > config.priceDiffLTC){
+                    if (diffLTC > config.priceDiffLTC) {
+                        msg += "LTC : \u20B9 " + ltc + " \u2191";
+                    } else if (diffLTC < config.priceDiffLTC) {
+                        msg += "LTC : \u20B9 " + ltc + " \u2193";
+                    }
                 }
+
             }
 
             if (diffETH !== 0 && lastETH !== 0) {
-                if (diffETH > config.priceDiffETH) {
-                    msg += "ETH : \u20B9 " + eth + " \u2191";
-                } else if (diffETH < config.priceDiffETH) {
-                    msg += "ETH : \u20B9 " + eth + " \u2193";
+                if (Math.abs(diffETH) > config.priceDiffETH){
+                      if (diffETH > config.priceDiffETH) {
+                          msg += "ETH : \u20B9 " + eth + " \u2191";
+                      } else if (diffETH < config.priceDiffETH) {
+                          msg += "ETH : \u20B9 " + eth + " \u2193";
+                      }
                 }
+
+
             }
 
-            // console.log('lastXRP ::' + lastXRP + 'current ::' + xrp);
-            // console.log('lastETH ::' + lastETH + 'current ::' + eth);
-            // console.log('lastLTC ::' + lastLTC + 'current ::' + ltc);
+             console.log('diff :: '+diffXRP +' lastXRP ::' + lastXRP + '   current ::' + xrp);
+             console.log('diff :: '+diffETH +' lastETH ::' + lastETH + '   current ::' + eth);
+             console.log('diff :: '+diffLTC +' lastLTC ::' + lastLTC + '   current ::' + ltc);
 
             lastXRP = xrp;
             lastLTC = ltc;
