@@ -1,0 +1,7 @@
+{
+    "timeIntervalInSeconds": 10,
+    "koinexUrl": "https://koinex.in/api/dashboards/ticker",
+    "priceDiffXRP":1,
+    "priceDiffLTC":100,
+    "priceDiffETH":1000
+}

@@ -1,0 +1,24 @@
+{
+  "name": "cryptotracker",
+  "version": "1.0.0",
+  "description": "crypto tracker for coins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polsumeet3666/cryptoTracker.git"
+  },
+  "author": "sumeet pol",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/polsumeet3666/cryptoTracker/issues"
+  },
+  "homepage": "https://github.com/polsumeet3666/cryptoTracker#readme",
+  "devDependencies": {
+    "cloudscraper": "^1.4.1",
+    "firebase-admin": "^5.8.0",
+    "node-notifier": "^5.2.1"
+  }
+}
